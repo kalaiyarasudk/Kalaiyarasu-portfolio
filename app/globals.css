@@ -1,0 +1,416 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to comprehensive color system with charcoal background */
+  --background: #0f172a;
+  --background-gradient: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+  --foreground: #f9fafb;
+  --card: rgba(15, 23, 42, 0.8);
+  --card-foreground: #f9fafb;
+  --popover: #0f172a;
+  --popover-foreground: #f9fafb;
+  /* Primary accent: Teal */
+  --primary: #14b8a6;
+  --primary-foreground: #ffffff;
+  /* Secondary accent: Sky Blue */
+  --secondary: #38bdf8;
+  --secondary-foreground: #ffffff;
+  --muted: rgba(15, 23, 42, 0.6);
+  --muted-foreground: #9ca3af;
+  /* Success/CTA accent: Green */
+  --cta: #22c55e;
+  --cta-foreground: #ffffff;
+  /* Highlight accent: Purple */
+  --highlight: #8b5cf6;
+  --highlight-foreground: #ffffff;
+  /* Featured badge text: White */
+  --featured-badge: #ffffff;
+  --accent: #38bdf8;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(20, 184, 166, 0.2);
+  --input: rgba(15, 23, 42, 0.8);
+  --ring: #14b8a6;
+  --chart-1: #14b8a6;
+  --chart-2: #38bdf8;
+  --chart-3: #8b5cf6;
+  --chart-4: #22c55e;
+  --chart-5: #f59e0b;
+  --radius: 0.625rem;
+  --sidebar: rgba(15, 23, 42, 0.8);
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: #14b8a6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #38bdf8;
+  --sidebar-accent-foreground: #f9fafb;
+  --sidebar-border: rgba(20, 184, 166, 0.2);
+  --sidebar-ring: #14b8a6;
+}
+
+.dark {
+  /* Consistent dark mode with charcoal background system */
+  --background: #0f172a;
+  --background-gradient: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+  --foreground: #f9fafb;
+  --card: rgba(15, 23, 42, 0.8);
+  --card-foreground: #f9fafb;
+  --popover: #0f172a;
+  --popover-foreground: #f9fafb;
+  --primary: #14b8a6;
+  --primary-foreground: #ffffff;
+  --secondary: #38bdf8;
+  --secondary-foreground: #ffffff;
+  --muted: rgba(15, 23, 42, 0.6);
+  --muted-foreground: #9ca3af;
+  --cta: #22c55e;
+  --cta-foreground: #ffffff;
+  --highlight: #8b5cf6;
+  --highlight-foreground: #ffffff;
+  --featured-badge: #ffffff;
+  --accent: #38bdf8;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(20, 184, 166, 0.2);
+  --input: rgba(15, 23, 42, 0.8);
+  --ring: #14b8a6;
+  --chart-1: #14b8a6;
+  --chart-2: #38bdf8;
+  --chart-3: #8b5cf6;
+  --chart-4: #22c55e;
+  --chart-5: #f59e0b;
+  --radius: 0.625rem;
+  --sidebar: rgba(15, 23, 42, 0.8);
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: #14b8a6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #38bdf8;
+  --sidebar-accent-foreground: #f9fafb;
+  --sidebar-border: rgba(20, 184, 166, 0.2);
+  --sidebar-ring: #14b8a6;
+}
+
+@theme inline {
+  /* Updated font variables from Geist to Inter for compatibility */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-manrope);
+
+  /* Added comprehensive color tokens for all UI elements */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-cta: var(--cta);
+  --color-cta-foreground: var(--cta-foreground);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+  --color-featured-badge: var(--featured-badge);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply text-foreground font-sans antialiased;
+    background: var(--background-gradient);
+    min-height: 100vh;
+  }
+
+  /* Updated scrollbar with teal theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(20, 184, 166, 0.6);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(20, 184, 166, 0.8);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Updated utility classes for new color system */
+.bg-cta {
+  background-color: var(--color-cta);
+}
+
+.text-cta-foreground {
+  color: var(--color-cta-foreground);
+}
+
+.bg-highlight {
+  background-color: var(--color-highlight);
+}
+
+.text-highlight-foreground {
+  color: var(--color-highlight-foreground);
+}
+
+.text-featured-badge {
+  color: var(--color-featured-badge);
+}
+
+.hover-accent {
+  transition: all 0.3s ease;
+}
+
+.hover-accent:hover {
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.btn-hover:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+}
+
+/* Portfolio-specific animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.6);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Enhanced microinteractions and brand signature styles */
+/* Enhanced microinteractions and animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(20, 184, 166, 0.8);
+  }
+}
+
+@keyframes skill-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-skill-progress {
+  animation: skill-progress 2s ease-out forwards;
+}
+
+/* Enhanced card depth and shadows */
+.card-elevated {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(20, 184, 166, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-elevated:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px
+    rgba(20, 184, 166, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Brand signature monogram */
+.brand-monogram {
+  background: linear-gradient(135deg, #14b8a6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Enhanced CTA button with proper green styling */
+.cta-button {
+  background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+  border: none !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px 0 rgba(34, 197, 94, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 25px 0 rgba(34, 197, 94, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Section headers with teal gradient */
+.section-header {
+  background: linear-gradient(135deg, #14b8a6, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Interactive skill bars */
+.skill-bar {
+  background: linear-gradient(90deg, #14b8a6, #8b5cf6);
+  border-radius: 9999px;
+  height: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Technology cards with teal accent system */
+.tech-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}
+
+.tech-card:hover {
+  background: rgba(20, 184, 166, 0.1);
+  border-color: rgba(20, 184, 166, 0.4);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(20, 184, 166, 0.2);
+}
+
+.tech-card:hover .tech-icon {
+  color: #22c55e;
+  transform: scale(1.1);
+}
+
+.tech-icon {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced glass morphism with charcoal background */
+.glass-card {
+  backdrop-filter: blur(16px);
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}
+
+/* Improved focus states for accessibility */
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
