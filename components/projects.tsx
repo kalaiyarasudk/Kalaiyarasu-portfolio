@@ -2,15 +2,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github } from "lucide-react"
+import getConfig from 'next/config';
+const { publicRuntimeConfig } = getConfig();
 
 export function Projects() {
+
+  // updated to use publicRuntimeConfig for basePath
+    const basePath = publicRuntimeConfig.basePath;
   const projects = [
+    
     {
       title: "E-Commerce Data Pipeline",
       description:
         "Built an end-to-end ETL pipeline to process 10K+ daily order and customer records stored in Amazon S3. Applied PySpark transformations and designed a star schema in Amazon Redshift for business reporting.",
       // image: "/aws-data-pipeline-architecture-diagram.jpg",
-      image: `${process.env.NEXT_PUBLIC_BASE_PATH}/aws-data-pipeline-architecture-diagram.jpg`,
+      // image: `${process.env.NEXT_PUBLIC_BASE_PATH}/aws-data-pipeline-architecture-diagram.jpg`,
+      image: `${basePath}/aws-data-pipeline-architecture-diagram.jpg`,
       technologies: ["Python", "PySpark", "AWS S3", "Amazon Redshift", "Parquet", "ETL"],
       liveUrl: "#",
       githubUrl: "https://github.com/johndoe/ecommerce-pipeline",
