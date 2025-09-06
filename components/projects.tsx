@@ -9,7 +9,8 @@ export function Projects() {
       title: "E-Commerce Data Pipeline",
       description:
         "Built an end-to-end ETL pipeline to process 10K+ daily order and customer records stored in Amazon S3. Applied PySpark transformations and designed a star schema in Amazon Redshift for business reporting.",
-      image: "/aws-data-pipeline-architecture-diagram.jpg",
+      // image: "/aws-data-pipeline-architecture-diagram.jpg",
+      image: `${process.env.NEXT_PUBLIC_BASE_PATH}/aws-data-pipeline-architecture-diagram.jpg`,
       technologies: ["Python", "PySpark", "AWS S3", "Amazon Redshift", "Parquet", "ETL"],
       liveUrl: "#",
       githubUrl: "https://github.com/johndoe/ecommerce-pipeline",
