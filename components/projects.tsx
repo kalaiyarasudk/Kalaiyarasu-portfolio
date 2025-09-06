@@ -16,7 +16,7 @@ export function Projects() {
       // image: "/aws-data-pipeline-architecture-diagram.jpg",
       // image: `${process.env.NEXT_PUBLIC_BASE_PATH}/aws-data-pipeline-architecture-diagram.jpg`,
       // image: `${basePath}/aws-data-pipeline-architecture-diagram.jpg`,
-      image: "/p-5/aws-data-pipeline-architecture-diagram.jpg",
+      image: "/p-5/public/aws-data-pipeline-architecture-diagram.jpg",
 
       technologies: ["Python", "PySpark", "AWS S3", "Amazon Redshift", "Parquet", "ETL"],
       liveUrl: "#",
