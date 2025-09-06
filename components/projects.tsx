@@ -17,7 +17,7 @@ export function Projects() {
       // image: `${process.env.NEXT_PUBLIC_BASE_PATH}/aws-data-pipeline-architecture-diagram.jpg`,
       // image: `${basePath}/aws-data-pipeline-architecture-diagram.jpg`,
       image: "/p-5/public/aws-data-pipeline-architecture-diagram.jpg",
-
+ 
       technologies: ["Python", "PySpark", "AWS S3", "Amazon Redshift", "Parquet", "ETL"],
       liveUrl: "#",
       githubUrl: "https://github.com/johndoe/ecommerce-pipeline",
