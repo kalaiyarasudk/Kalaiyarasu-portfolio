@@ -2,36 +2,36 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ main ]   # <-- use main unless your repo really uses master
+
+permissions:
+  contents: write        # <-- allow GITHUB_TOKEN to push
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
         
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
       
-    - name: Build
-      run: npm run build
+      - name: Build Next.js
+        run: npm run build && npm run export   # <-- ensures /out folder is created
+
+      - name: Add .nojekyll
+        run: touch ./out/.nojekyll
       
-    - name: Add .nojekyll file
-      run: touch ./out/.nojekyll
-      
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/master'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./out
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
