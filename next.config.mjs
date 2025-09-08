@@ -30,8 +30,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  basePath: isProd ? '/p-5' : '',
-  assetPrefix: isProd ? '/p-5/' : '',
+  basePath: isProd ? '/kalaiyarasu-portfolio' : '',
+  assetPrefix: isProd ? '/kalaiyarasu-portfolio/' : '',
 }
 
 export default nextConfig
