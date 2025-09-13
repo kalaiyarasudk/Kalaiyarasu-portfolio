@@ -46,7 +46,7 @@ export function Projects() {
       title: "E-Commerce Transaction Pipeline",
       description:
         "Built an end-to-end E-Commerce data pipeline using PySpark and Delta Lake. Processed 10K+ transactions, joined customer/product data, and delivered fraud detection and revenue insights via Delta tables and Spark SQL.",
-      image: `${prefix}//public/Ecommerce-Transaction-Pipeline.png`,
+      image: `${prefix}/Ecommerce-Transaction-Pipeline.png`,
       technologies: ["Python", "Pyspark", "Delta Lake", "Databricks", "ETL", "SQL"],
       liveUrl: "#",
       githubUrl: "https://github.com/kalaiyarasudk/Ecommerce-Transaction-Pipeline",
