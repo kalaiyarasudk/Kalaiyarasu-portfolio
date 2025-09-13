@@ -27,7 +27,7 @@ export function Navigation() {
   const handleDownloadResume = () => {
     // Create a dummy PDF download - in real implementation, this would be your actual resume
     const link = document.createElement("a")
-    link.href = "/placeholder.svg?height=800&width=600"
+    link.href = "CV_Kalaiyarasu__2025.pdf"
     link.download = "Kalaiyarasu_D_Resume.pdf"
     document.body.appendChild(link)
     link.click()
