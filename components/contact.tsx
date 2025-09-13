@@ -7,19 +7,13 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "john@example.com",
-      href: "mailto:john@example.com",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "kalaiyarasu210@gmail.com",
+      href: "mailto:kalaiyarasu210@gmail.com",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Chennai, India",
       href: "#",
     },
   ]
@@ -70,7 +64,6 @@ export function Contact() {
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Email for project inquiries and detailed discussions</li>
                 <li>• LinkedIn for professional networking</li>
-                <li>• Phone for urgent matters or quick conversations</li>
               </ul>
             </div>
           </div>
