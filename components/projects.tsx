@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github } from "lucide-react"
 const prefix = process.env.NODE_ENV === 'production' ? '/kalaiyarasu-portfolio' : ''
 
-export function Projects() {
+export function Projects() { 
 
   // updated to use publicRuntimeConfig for basePath
     // const basePath = publicRuntimeConfig.basePath;
