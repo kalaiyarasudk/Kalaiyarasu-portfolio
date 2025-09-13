@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github } from "lucide-react"
-const prefix = process.env.NODE_ENV === 'production' ? '/p-5' : ''
+const prefix = process.env.NODE_ENV === 'production' ? '/kalaiyarasu-portfolio' : ''
 
 export function Projects() {
 
@@ -26,7 +26,7 @@ export function Projects() {
       title: "Credit Card Fraud Risk Detection",
       description:
         "Implemented fraud risk detection system using PySpark with Delta Lake on Databricks. Processed 50K+ simulated transactions with anomaly detection rules and real-time monitoring dashboards.",
-      image: "/fraud-detection-dashboard-with-charts-and-alerts.jpg",
+      image: `${prefix}/fraud-detection-dashboard-with-charts-and-alerts.jpg`,
       technologies: ["PySpark", "Delta Lake", "Databricks", "Python Faker", "SQL", "Anomaly Detection"],
       liveUrl: "#",
       githubUrl: "https://github.com/johndoe/fraud-detection",
@@ -36,42 +36,33 @@ export function Projects() {
       title: "AWS Movie Data Engineering Pipeline",
       description:
         "Designed and deployed a serverless data pipeline to process raw movie data. Used Step Functions to orchestrate Glue jobs with real-time SNS alerts for monitoring.",
-      image: "/aws-serverless-architecture-with-lambda-and-glue.jpg",
+      image: `${prefix}/aws-serverless-architecture-with-lambda-and-glue.jpg`,
       technologies: ["AWS Lambda", "AWS Glue", "Step Functions", "SNS", "PySpark", "Serverless"],
       liveUrl: "#",
       githubUrl: "https://github.com/johndoe/movie-pipeline",
       featured: false,
     },
     {
-      title: "Real-time Streaming Analytics",
+      title: "E-Commerce Transaction Pipeline",
       description:
-        "Built a streaming data pipeline for processing real-time events using Apache Kafka and Spark Streaming with monitoring dashboards.",
-      image: "/real-time-streaming-data-architecture.jpg",
-      technologies: ["Apache Kafka", "Spark Streaming", "Python", "Docker"],
+        "Built an end-to-end E-Commerce data pipeline using PySpark and Delta Lake. Processed 10K+ transactions, joined customer/product data, and delivered fraud detection and revenue insights via Delta tables and Spark SQL.",
+      image: `${prefix}//public/Ecommerce-Transaction-Pipeline.png`,
+      technologies: ["Python", "Pyspark", "Delta Lake", "Databricks", "ETL", "SQL"],
       liveUrl: "#",
-      githubUrl: "https://github.com/johndoe/streaming-analytics",
+      githubUrl: "https://github.com/kalaiyarasudk/Ecommerce-Transaction-Pipeline",
       featured: false,
     },
     {
       title: "Data Lake Architecture",
       description:
         "Implemented a scalable data lake solution on AWS with automated data cataloging and governance using AWS Glue Data Catalog.",
-      image: "/data-lake-architecture-diagram.jpg",
+      image: `${prefix}/data-lake-architecture-diagram.jpg`,
       technologies: ["AWS S3", "AWS Glue", "Data Catalog", "Parquet", "Athena"],
       liveUrl: "#",
       githubUrl: "https://github.com/johndoe/data-lake",
       featured: false,
     },
-    {
-      title: "SOX Compliance Dashboard",
-      description:
-        "Developed automated compliance reporting dashboard for SOX controls with data validation and audit trail capabilities.",
-      image: "/compliance-dashboard-with-charts-and-reports.jpg",
-      technologies: ["Python", "SQL", "Tableau", "Data Validation", "Audit Trail"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/johndoe/sox-dashboard",
-      featured: false,
-    },
+    
   ]
 
   const featuredProjects = projects.filter((project) => project.featured)
