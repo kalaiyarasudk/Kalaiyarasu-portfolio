@@ -62,7 +62,7 @@ export function Hero() {
               </a>
             </Button>
             <Button variant="ghost" size="sm" asChild>
-              <a href="mailto:john@example.com">
+              <a href="mailto:kalaiyarasu210@gmail.com">
                 <Mail className="w-6 h-6" />
                 <span className="sr-only">Email</span>
               </a>
